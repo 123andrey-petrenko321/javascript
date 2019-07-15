@@ -165,11 +165,302 @@ function mass (str,start,end){
     return res;
 }
 console.log(mass(str,2));*/
-
+/*
 const str = 'hellow world';
 const foo = (str,char) => {
     for(let i = 0;i< str.length;i++){
         if(str[i]==char) return i;
     }
     return -1
+};*/
+
+
+/*function binarySearch (array, item){
+  let low = 0;
+  let high = array.lenght -1 ;
+    while (low <= high) {
+        mid = ((low + high)/2) ;
+        guess = array[mid];
+        if (guess == item) {
+            return mid;
+        }else if(guess > mid){
+            high = mid -1;
+        }else{
+            low = mid +1;
+            return None;
+        }
+    }
+    let my_array = [1,3,5,7,9,11,13,15]
+};
+console.log(binarySearch(my_array,5));*/
+
+
+// возведение в степень
+/*function pov (a , b){
+    let res = 1;
+    for(let i = 1;i<=b;i++){
+        res = res * a;
+        
+        console.log(res);
+    }
+    return res;
 }
+pov(3,5);*/
+
+
+//факториал
+
+/*
+function fact (a){
+    let res = 1;
+    for(let i =a;i > 1;i--){
+        res = res * i
+        console.log(res);
+    }
+    return res;
+}
+fact(5);*/
+
+
+//геометрическая прогрессия
+/*
+function prog (a,b){
+    let res = 1;
+    for(let i =0;i< b;i++){
+        res = res *a
+        console.log(res);
+    }
+    return res;
+}
+prog(2,13);*/
+
+//мин макс числа
+/*function max(a,b){
+   if (a>b) {
+       return a;
+   }else if(a==b)
+    return 'not corect';
+   else{
+       return b;
+   }
+}
+console.log(max(51,52));*/
+
+
+//рекурсия
+
+/*function fact(n) {
+    if (n==1) {
+        return 1;
+    }
+    return fact(n-1)*n;
+}console.log(fact(5));*/
+
+
+/*function fib(n){
+   return n <=1? n : fib(n-1)+fib(n-2);
+   
+}
+console.log(fib(15));*/
+
+
+/*function fib(n) {
+    let a = 1,b=1;
+    for(let i = 3;i<=n;i++){
+        sum = a+b;
+        a=b;
+        b = sum
+    }
+    return b;
+}
+console.log(fib(15));*/
+
+/*
+function str(string){
+    for(let i=0;i<string.length;i++){
+        console.log(string[i]);
+    }
+    return string;
+}
+console.log(str('mtfck'));*/
+
+
+/*
+function str(string){
+    for(let i=0;i<string.length;i++){
+        console.log(string[i]);
+    }
+    return string.toUpperCase();
+}
+console.log(str('MhggGFFGDGqqq'));*/
+
+
+/*
+function str(string,start,end){
+   
+    let res ="";
+    for(let i=start?start:0;i<(end?(end>string.length?string.length:end):string.length);i++){
+        res +=string[i];
+    }
+   return res;
+}
+console.log(str('12345678910',2,15));
+*/
+/*
+function strfoo(str1,str2){
+    if (str1.length != str2.length) {
+        return false
+    }
+    for(let i=0;i<str1.length;i++){
+        if (str1[i]!=str2[i]) {
+            return false;
+        }
+    }
+    return true;
+}
+//console.log(strfoo('hello','hello'));
+*/
+//homework indexof
+/*
+function search(str,find){
+    let indexstr ;
+    for(let i =0;i<str.length;i++){
+        indexstr = str.indexOf(find);
+        return indexstr;
+       
+    }
+    return -1;
+}
+console.log(search('123456789101112131415','91'));
+*/
+/*
+const str = 'hellow world';
+const foo = (str,find) => {
+    for(let i = 0;i< str.length;i++){
+        if(str[i]==find) return i;
+    }
+    return -1
+}
+console.log(foo('helloworld','wor'));*/
+
+//MASS 
+
+
+
+/*let arr = [1,2,3,4,5,6];
+
+
+console.log(arr.length);
+console.log(arr[arr.length - 1]);
+
+
+for(let i =0;i<arr.length;i++){
+    console.log(arr[i])
+}*/
+
+
+/*function foo(n) {
+    let arr=[];
+    for(let i =0;i<n;i++){
+        arr.push(i);
+    }
+    return arr;
+}
+console.log(foo(-2));
+*/
+//#########
+
+
+
+//homework
+
+/*function foo(n) {
+    let arr=[];
+    for(let i =0;i<n;i++){
+        if (n = true) {
+            arr.push(i);
+        }
+       
+    }
+    return arr;
+}
+console.log(foo(5));*/
+
+//###########
+/*let arr = [1,2,3,4,5,6,7,8,9];
+let res = [];
+function rev(arr) {
+    for(let i = arr.length ;i >= 0;i--){
+        res.push(arr[i]);
+    }
+ 
+}*/
+/*let arr = [1,2,3,4,5,6,7,8,9];
+
+const reverce = (array,cb) => array.map(cb);
+
+const newArr = reverce(arr,(el,i,a)=> a[a.length-1-i])
+console.log(newArr)*/
+
+
+
+//homework
+/*
+let arr = [9,6,8,4,7,2,1,5,3];
+let res = [];
+let buffer = null;
+function srt(arr){
+    for(let i = 0;i<arr.length-1;i++){
+        buffer = arr[i];
+        
+        for(let j = i;j<arr.length-1;j++){
+            if(buffer>arr[j]){
+            buffer = arr[j]
+          }
+          console.log(buffer);
+        }
+        res.push(buffer);
+    }
+
+}
+console.log(res);
+*/
+
+/*
+let arr = [9,6,8,4,7,2,1,5,3];
+
+
+function foo(arr) {
+    let sum= 0;
+    for(let i =0;i<arr.length - 1;i++){
+     sum += arr[i];
+       
+    }
+    return sum;
+}
+
+console.log(foo(arr));*/
+/*
+let arr = ['a,','b','c','d','e','f','g'];
+console.log(arr.reduce((acc,el)=>acc+el,0));
+*/
+
+
+
+
+const str ='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+//let arr = str.split(' ');
+
+/*let res = str.split(' ').reduce((acc,el,i)=>{
+    if(i<10){
+        return acc + " " + el
+    }else{
+        return acc
+    }
+},'')+ '...'
+console.log(res);*/
+
+/*let res = str.split(' ').reduce((acc,el,i)=>(i<10)?`${acc} ${el}`:acc,'') + '...'
+console.log(res);*/
+
+
