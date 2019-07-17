@@ -19,7 +19,8 @@ console.log(binarySearch(my_array,5));*/
 
 
 // возведение в степень
-/*function pov (a , b){
+/*
+function pov (a , b){
     let res = 1;
     for(let i = 1;i<=b;i++){
         res = res * a;
@@ -28,8 +29,8 @@ console.log(binarySearch(my_array,5));*/
     }
     return res;
 }
-pov(3,5);*/
-
+pov(3,5);
+*/
 
 //факториал
 
@@ -42,8 +43,8 @@ function fact (a){
     }
     return res;
 }
-fact(5);*/
-
+fact(7);
+*/
 
 //геометрическая прогрессия
 /*
@@ -55,8 +56,8 @@ function prog (a,b){
     }
     return res;
 }
-prog(2,13);*/
-
+prog(2,64);
+*/
 //мин макс числа
 /*function max(a,b){
    if (a>b) {
@@ -71,33 +72,34 @@ console.log(max(51,52));*/
 
 
 //рекурсия
-
-/*function fact(n) {
+/*
+function fact(n) {
     if (n==1) {
         return 1;
     }
     return fact(n-1)*n;
-}console.log(fact(5));*/
-
-
-/*function fib(n){
+}console.log(fact(7));
+*/
+/*
+function fib(n){
    return n <=1? n : fib(n-1)+fib(n-2);
-   
+
 }
-console.log(fib(15));*/
-
-
-/*function fib(n) {
+console.log(fib(3));
+*/
+/*
+function fib(n) {
     let a = 1,b=1;
     for(let i = 3;i<=n;i++){
         sum = a+b;
         a=b;
         b = sum
+        console.log(b);
     }
     return b;
 }
-console.log(fib(15));*/
-
+console.log(fib(15));
+*/
 /*
 function str(string){
     for(let i=0;i<string.length;i++){
@@ -144,7 +146,7 @@ function strfoo(str1,str2){
 //console.log(strfoo('hello','hello'));
 */
 //homework indexof
-
+/*
 function search(str,find){
     let indexstr ;
     for(let i =0;i<str.length;i++){
@@ -154,10 +156,50 @@ function search(str,find){
     }
     return -1;
 }
-console.log(search('123456789101112131415','15'));
+console.log(search('priwetmir','tm'));
+
+*/
+
+
+/*
+const str = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+let res = str.split(' ').reduce((acc,el,i)=>{
+    if(i<10){
+        return acc + " " + el
+    }else{
+        return acc
+    }
+},'')+ '...'
+console.log(res)
+*/
 
 
 
 
+/////////////HOMEWORK////////////
 
 
+const arr = [6,4,3,1,9,7,8,2,5];
+let buffer;
+function bubl(arr) {
+    for(let i = arr.length-1;i > 0;i--){
+        let count = 0;
+        for(let j = 0;j < i;j++){
+            if(arr[j]>arr[j+1]){
+                buffer = arr[j];
+                arr[j]= arr[j + 1];
+                arr[j+1]= buffer;
+                count++;
+            }
+        }
+       if (count==0) {
+            break;
+        }
+    }
+    return arr;
+}
+console.log(bubl(arr));
+
+
+
+  
