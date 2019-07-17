@@ -448,7 +448,7 @@ console.log(arr.reduce((acc,el)=>acc+el,0));
 
 
 
-const str ='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+//const str ='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
 //let arr = str.split(' ');
 
 /*let res = str.split(' ').reduce((acc,el,i)=>{
@@ -463,4 +463,93 @@ console.log(res);*/
 /*let res = str.split(' ').reduce((acc,el,i)=>(i<10)?`${acc} ${el}`:acc,'') + '...'
 console.log(res);*/
 
+/*
+const arr = [6,4,3,1,9,7,8,2,5];
+let buffer;
+let count = 0;
+function bubl(arr) {
+    for(let i = arr.length-1;i > 0;i--){
+        for(let j = 0;j < i;j++){
+            if(arr[j]>arr[j+1]){
+                buffer = arr[j];
+                arr[j]= arr[j + 1];
+                arr[j+1]= buffer;
+                count++;
+            }
+        }
+       if (count==0) {
+            break;
+        }
+    }
+    return arr;
+}
+console.log(bubl(arr));
 
+*/
+
+////http://www.tvd-home.ru/recursion
+
+
+
+//new Array(10).map(el => console.log(el))
+
+/*
+
+
+const user = {
+    name:'Oleh',
+    gender:'male',
+    age:37,
+
+    work(){
+        console.log('coding')
+    }
+
+}
+
+for(key in user){
+    console.log(key)
+}
+
+Object.keys(user).map(el => console.log(user[el]))
+
+*/
+/*
+const users = [
+    {   name:'Oleh',
+        gender:'male',
+        age:37,
+        solary:2500
+    },
+    {
+        name:'Anna',
+        gender:'female',
+        age:30,
+        solary:1500
+    },
+    { 
+        name:'Anna',
+        gender:'female',
+        age:30,
+        solary:2000
+    },
+    
+];
+const new_user = users.map(el => Object.assign({},el));
+new_user[1].solary = 5500;
+const res = {};
+for(key in obj){
+    res[key] = obj[key]
+}
+
+*/
+
+
+//const sum = (collection, gender) => collection.reduce((acc,el) => gender?el.gender ===gender?acc + el.salary:acc:acc + el.salary,0);
+
+
+let str ='anna';
+
+const poli = (str) => { 
+    return str.split('').reverse().join('');
+}
