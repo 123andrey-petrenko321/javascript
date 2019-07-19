@@ -546,10 +546,121 @@ for(key in obj){
 
 
 //const sum = (collection, gender) => collection.reduce((acc,el) => gender?el.gender ===gender?acc + el.salary:acc:acc + el.salary,0);
-
+/*
 
 let str ='anna';
 
 const poli = (str) => { 
     return str.split('').reverse().join('');
 }
+*/
+
+
+
+/*
+let n = Number;
+function fb(n) {
+    for(var i = 1;i<=n;i++){
+       if (i%3===0 && i%5===0) {
+        console.log(i,' fizzbuzz');
+       }else if (i%3==0) {
+           console.log(i,'fizz');
+       }else if (i%5==0) {
+           console.log(i,'buzz');
+       }else{
+           console.log(i);
+       }
+      
+    }
+   
+}
+fb(45);
+
+*/
+/*
+const Oleh ={
+    name:'Oleh',
+    password:'123456',
+    gender:'male',
+    age: 37,
+    salary:2500,
+    address:{
+        street:'Lenina 55'
+    }
+}*/
+/*const name = Oleh.name;
+const gender= Oleh.gender;
+const age = Oleh.age;
+const salary = Oleh.salary;
+const street = Oleh.address.street
+*/
+//const{password,...user} = Oleh;
+
+//const f=()=>{
+  //  console.log('hello')
+//}
+/*
+(({sum,count}) => {
+      console.log(sum/count);
+})(
+    (()=>({sum:1200,count:6}))()
+)
+*/
+
+/*
+function foo(a) {
+    console.log(a);
+   // Array.from(arguments).map(e => console.log(e))
+   [...arguments].map(e => console.log(e))
+}
+*/
+/*
+const foo = (a,...rest) => rest.map(e => console.log(e))
+foo('aaaa','bbb','cccc','ddddd');
+*/
+const name = 'anonim';
+
+const Oleh ={
+    name:'Oleh',
+    password:'123456',
+    gender:'male',
+    age: 37,
+    salary:2500,
+    address:{
+        street:'Lenina 55'
+    },
+
+
+    sayHello: function(userName){
+        console.log(`hello ${userName}, my name ${this.name}`)
+    },
+}
+const John ={
+    name:'John',
+    password:'123456',
+    gender:'male',
+    age: 37,
+    salary:2500,
+    address:{
+        street:'Lenina 55'
+    },
+
+
+    sayHello: function(userName){
+        console.log(`hello ${userName}, my name ${this.name}`)
+    },
+}
+function User(name,password,gender,age,salary){
+     this.name = name;
+     this.password = password;
+     this.gender = gender;
+
+}
+const users =[
+    Oleh,John
+]
+
+const sayHello = Oleh.sayHello;
+/*const sayHello = function(userName){
+    console.log(`hello ${userName}, my name ${this.name}`)
+}*/
