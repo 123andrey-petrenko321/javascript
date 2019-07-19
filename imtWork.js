@@ -178,7 +178,7 @@ console.log(res)
 
 /////////////HOMEWORK////////////
 
-
+/*
 const arr = [6,4,3,1,9,7,8,2,5];
 let buffer;
 function bubl(arr) {
@@ -199,7 +199,56 @@ function bubl(arr) {
     return arr;
 }
 console.log(bubl(arr));
+*/
+///////////////FIZZBUZZ//////////////
+/*
+let n = Number;
+function fb(n) {
+    for(var i = 1;i<=n;i++){
+       if (i%3===0 && i%5===0) {
+        console.log(i,' fizzbuzz');
+       }else if (i%3==0) {
+           console.log(i,'fizz');
+       }else if (i%5==0) {
+           console.log(i,'buzz');
+       }else{
+           console.log(i);
+       }
+      
+    }
+   
+}
+fb(45);
+*/
+//////////////////////////////////////
+/*
+let n = Number;
+function fb(n) {
+    for(var i = 1;i<=n;i++){
+       if (i%3===0 && i%5===0) {
+        console.log(i,' fizzbuzz');
+       }else if (i%3==0) {
+           console.log(i,'fizz');
+       }else if (i%5==0) {
+           console.log(i,'buzz');
+       }else{
+           console.log(i);
+       }
+      
+    }
+   
+}
+fb(45);
+*/
 
 
 
-  
+function ana(str1) {
+    let arr1 = [];
+    arr1 = str1.split('')
+    for(let i = 0;i<arr1.length ;i++){
+        console.log(arr1[i])
+    }
+    
+}
+ana('aabbcc');
