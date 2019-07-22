@@ -242,13 +242,88 @@ fb(45);
 */
 
 
+const getRandomFirstName = () => {
+    const names = [
+        "Aaliyah",
+        "Aaron",
+        "Abagail",
+        "Abbey",
+        "Abbie",
+        "Abbigail",
+        "Abby",
+        "Abdiel",
+        "Abdul",
+        "Abdullah",
+        "Abe",
+        "Abel",
+        "Abelardo",
+        "Abigail",
+        "Abigale",
+        "Abigayle",
+        "Abner",
+        "Abraham",
+        "Ada",
+        "Adah",
+    ];
 
-function ana(str1) {
-    let arr1 = [];
-    arr1 = str1.split('')
-    for(let i = 0;i<arr1.length ;i++){
-        console.log(arr1[i])
-    }
-    
+    return names[Math.floor(Math.random()*names.length)]
 }
-ana('aabbcc');
+
+const getRandomLastName = () => {
+    const names = [
+        "Abbott",
+        "Abernathy",
+        "Abshire",
+        "Adams",
+        "Altenwerth",
+        "Anderson",
+        "Ankunding",
+        "Armstrong",
+        "Auer",
+        "Aufderhar",
+        "Bahringer",
+        "Bailey",
+        "Balistreri",
+        "Barrows",
+        "Bartell",
+        "Bartoletti",
+        "Barton",
+        "Bashirian",
+        "Batz",
+        "Bauch",
+        "Baumbach",
+        "Bayer",
+        "Beahan",
+        "Beatty",
+        "Bechtelar",
+        "Becker",
+        "Bednar",
+    ];
+
+    return names[Math.floor(Math.random()*names.length)]
+}
+
+const getFullName = () => `${getRandomFirstName()} ${getRandomLastName()}`
+
+const getGender = () => Math.random()> 0.5?'male':'famale'
+
+function User(name=getFullName(),password,gender=getGender(),age=Math.ceil(Math.random()*100),salary=Math.ceil(Math.random()*2000)){
+    this.name = name;
+    this.password = password;
+    this.gender = gender;
+    this.age = age;
+    this.salary = salary;
+}
+const users = Array.from(new Array(10)).map(el => new User());
+
+///homework
+
+///const rand = () => { return users[Math.floor(Math.random()*users.length)]};
+
+
+
+
+
+
+
+users.forEach(function(element){console.log(element)});
