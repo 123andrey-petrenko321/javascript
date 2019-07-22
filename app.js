@@ -618,6 +618,7 @@ function foo(a) {
 const foo = (a,...rest) => rest.map(e => console.log(e))
 foo('aaaa','bbb','cccc','ddddd');
 */
+/*
 const name = 'anonim';
 
 const Oleh ={
@@ -664,3 +665,107 @@ const sayHello = Oleh.sayHello;
 /*const sayHello = function(userName){
     console.log(`hello ${userName}, my name ${this.name}`)
 }*/
+/*
+const getRandomFirstName = () => {
+    const names = [
+        "Aaliyah",
+        "Aaron",
+        "Abagail",
+        "Abbey",
+        "Abbie",
+        "Abbigail",
+        "Abby",
+        "Abdiel",
+        "Abdul",
+        "Abdullah",
+        "Abe",
+        "Abel",
+        "Abelardo",
+        "Abigail",
+        "Abigale",
+        "Abigayle",
+        "Abner",
+        "Abraham",
+        "Ada",
+        "Adah",
+    ];
+
+    return names[Math.floor(Math.random()*names.length)]
+}
+
+const getRandomLastName = () => {
+    const names = [
+        "Abbott",
+        "Abernathy",
+        "Abshire",
+        "Adams",
+        "Altenwerth",
+        "Anderson",
+        "Ankunding",
+        "Armstrong",
+        "Auer",
+        "Aufderhar",
+        "Bahringer",
+        "Bailey",
+        "Balistreri",
+        "Barrows",
+        "Bartell",
+        "Bartoletti",
+        "Barton",
+        "Bashirian",
+        "Batz",
+        "Bauch",
+        "Baumbach",
+        "Bayer",
+        "Beahan",
+        "Beatty",
+        "Bechtelar",
+        "Becker",
+        "Bednar",
+    ];
+
+    return names[Math.floor(Math.random()*names.length)]
+}
+
+const getFullName = () => `${getRandomFirstName()} ${getRandomLastName()}`
+
+const getGender = () => Math.random()> 0.5?'male':'famale'
+
+function User(name=getFullName(),password,gender=getGender(),age=Math.ceil(Math.random()*100),salary=Math.ceil(Math.random()*2000)){
+    this.name = name;
+    this.password = password;
+    this.gender = gender;
+    this.age = age;
+    this.salary = salary;
+}
+const users = Array.from(new Array(10)).map(el => new User());
+
+///homework
+
+const rand = () => { return users[Math.floor(Math.random()*users.length)]};
+
+
+
+
+
+
+
+//users.forEach(function(element){console.log(element)});
+
+*/
+
+//setTimeout(()=> console.log("dghxdfgjhfj"),5000)
+
+
+for(var i =0;i<10;i++){
+    setTimeout(()=>console.log("i:",i),1000);
+}
+/*
+function foo(a){
+    var x = 10;
+    return function(){
+        console.log(`${a}-${x}`)
+    }
+}
+const f =foo;
+*/
