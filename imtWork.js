@@ -241,7 +241,7 @@ function fb(n) {
 fb(45);
 */
 
-
+/*
 const getRandomFirstName = () => {
     const names = [
         "Aaliyah",
@@ -315,7 +315,7 @@ function User(name=getFullName(),password,gender=getGender(),age=Math.ceil(Math.
     this.salary = salary;
 }
 const users = Array.from(new Array(10)).map(el => new User());
-
+*/
 ///homework
 
 ///const rand = () => { return users[Math.floor(Math.random()*users.length)]};
@@ -326,4 +326,28 @@ const users = Array.from(new Array(10)).map(el => new User());
 
 
 
-users.forEach(function(element){console.log(element)});
+//users.forEach(function(element){console.log(element)});
+
+
+/*
+const array = document.body.children;
+
+
+console.log(array)
+*/
+
+
+const arr= [1,[2,[3,[4,5,6,7,[1]]]]];
+
+function rec(arr) {
+    let lev = 0;
+    for(var i = 0;i<arr.length;i++){
+        if(typeof arr[i]=="object"){
+            arr[i]=rec(arr[i]);
+        }else {
+        console.log(arr[i])
+        }
+    }
+    return arr;
+}
+console.log(rec(arr));
