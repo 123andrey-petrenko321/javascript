@@ -755,11 +755,12 @@ const rand = () => { return users[Math.floor(Math.random()*users.length)]};
 */
 
 //setTimeout(()=> console.log("dghxdfgjhfj"),5000)
-
+/*
 
 for(var i =0;i<10;i++){
     setTimeout(()=>console.log("i:",i),1000);
 }
+*/
 /*
 function foo(a){
     var x = 10;
@@ -769,3 +770,97 @@ function foo(a){
 }
 const f =foo;
 */
+/*
+
+const arr= [1,[2,[3,[4,5,6,7,[1]]]]];
+
+function rec(arr) {
+    let lev = 0;
+    for(var i = 0;i<arr.length;i++){
+        if(typeof arr[i]=="object"){
+           return arr[i]=rec(arr[i]);
+        }else {
+        console.log(arr[i])
+        }
+    }
+    return arr;
+}
+console.log(rec(arr));
+*/
+
+
+
+
+/*
+const sum=[...document.querySelectorAll('tr > td:last-child')]
+    .map(el=>Number(el.innerHTML)).reduce((acc,el) => acc+el,0);
+
+const html = document.createElement('div');
+
+html.innerText = 'Total: ' + sum + '$';
+*/
+//document.getElementsByClassName('col-12')[0]. appendChild(html);
+
+
+//document.querySelector('table > tbody > tr:nth-child(5) > td:nth-child(4)').innerText = 'Total: ' + sum + '$';
+
+
+const users = [
+    {name:'Mark',gender:'male',salary:'1900'},
+    {name:'Igor',gender:'male',salary:'900'},
+    {name:'John',gender:'male',salary:'1800'},
+    {name:'Mery',gender:'female',salary:'1700'},
+    {name:'Any',gender:'female',salary:'2000'},
+    {name:'Pit',gender:'male',salary:'3000'},
+    {name:'Tom',gender:'male',salary:'1800'},
+    {name:'Jack',gender:'male',salary:'700'},
+];
+const createElement = (tag,content) =>{
+    const element = document.createElement(tag);
+    element.innerText = content;
+    return element;
+}
+const innerTablesRows = users.map((el,i)=>{
+    const tr = document.createElement('tr');
+
+    const index = document.createElement('th',i + 1 );
+    tr.appendChild(index)
+
+    const name = document.createElement('td',el.name);
+    tr.appendChild(name)
+
+    const gender = document.createElement('td',el.gender);
+    tr.appendChild(gender)
+
+    const salary = document.createElement('td',el.salary);
+    tr.appendChild(salary)
+
+    return tr;
+});
+
+const tbody = document.createElement('tbody')
+innerTablesRows.map(el=>tbody.appendChild(el));
+
+
+
+const tr = document.createElement('tr');
+const index = document.createElement('th','# ');
+    tr.appendChild(index)
+
+    const name = document.createElement('th','name');
+    tr.appendChild(name)
+
+    const gender = document.createElement('th','gender');
+    tr.appendChild(gender)
+
+    const salary = document.createElement('th','salary');
+    tr.appendChild(salary)
+
+const thead = document.createElement('thead');
+thead.appendChild(tr);
+
+const table = document.createElement('table');
+table.appendChild(thead);
+table.appendChild(tbody);
+
+document.getElementsByClassName('col-12')[0]. appendChild(table);
